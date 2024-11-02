@@ -3,7 +3,6 @@
   import TutorsShell from "$lib/ui/app-shells/TutorsShell.svelte";
   import { SlideToggle } from "@skeletonlabs/skeleton";
   import { allStudentsOnlineList, partykitGateway } from "./partykit-gateway";
-  import StudentCard from "$lib/ui/time/StudentCard.svelte";
   import { presenceServiceSimulator } from "./presence-simulator";
 
   export let data: any;
@@ -56,10 +55,5 @@
         <div class="hidden lg:inline-block ml-12 prose align-right">This is a simulation of TutorsLive. All of the students are AI generated, the courses are real.</div>
       </div>
     </div>
-  </div>
-  <div class="flex flex-wrap justify-center">
-    {#each $allStudentsOnlineList as lo}
-      <StudentCard {lo} />
-    {/each}
   </div>
 </TutorsShell>
